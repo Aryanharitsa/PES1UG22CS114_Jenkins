@@ -17,6 +17,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+                // Induced error: non-existent command
+                sh 'this_command_does_not_exist'
             }
         }
     }
@@ -27,3 +29,4 @@ pipeline {
         }
     }
 }
+
